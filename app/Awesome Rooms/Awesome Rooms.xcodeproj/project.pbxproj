@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E14F4E0D21516AA000A7669F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F4E0C21516AA000A7669F /* AppDelegate.swift */; };
+		E14F4E0F21516AA000A7669F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F4E0E21516AA000A7669F /* ViewController.swift */; };
+		E14F4E1221516AA000A7669F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14F4E1021516AA000A7669F /* Main.storyboard */; };
+		E14F4E1521516AA000A7669F /* Awesome_Rooms.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E14F4E1321516AA000A7669F /* Awesome_Rooms.xcdatamodeld */; };
+		E14F4E1721516AA700A7669F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E14F4E1621516AA700A7669F /* Assets.xcassets */; };
+		E14F4E1A21516AA700A7669F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14F4E1821516AA700A7669F /* LaunchScreen.storyboard */; };
+		E14F4E2521516AA700A7669F /* Awesome_RoomsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F4E2421516AA700A7669F /* Awesome_RoomsTests.swift */; };
+		E14F4E3021516AA700A7669F /* Awesome_RoomsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F4E2F21516AA700A7669F /* Awesome_RoomsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E14F4E2121516AA700A7669F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E14F4E0121516AA000A7669F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E14F4E0821516AA000A7669F;
+			remoteInfo = "Awesome Rooms";
+		};
+		E14F4E2C21516AA700A7669F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E14F4E0121516AA000A7669F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E14F4E0821516AA000A7669F;
+			remoteInfo = "Awesome Rooms";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E14F4E0921516AA000A7669F /* Awesome Rooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Awesome Rooms.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E14F4E0C21516AA000A7669F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E14F4E0E21516AA000A7669F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E14F4E1121516AA000A7669F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E14F4E1421516AA000A7669F /* Awesome_Rooms.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Awesome_Rooms.xcdatamodel; sourceTree = "<group>"; };
+		E14F4E1621516AA700A7669F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E14F4E1921516AA700A7669F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E14F4E1B21516AA700A7669F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E14F4E2021516AA700A7669F /* Awesome RoomsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Awesome RoomsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E14F4E2421516AA700A7669F /* Awesome_RoomsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Awesome_RoomsTests.swift; sourceTree = "<group>"; };
+		E14F4E2621516AA700A7669F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E14F4E2B21516AA700A7669F /* Awesome RoomsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Awesome RoomsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E14F4E2F21516AA700A7669F /* Awesome_RoomsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Awesome_RoomsUITests.swift; sourceTree = "<group>"; };
+		E14F4E3121516AA700A7669F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E14F4E0621516AA000A7669F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E14F4E1D21516AA700A7669F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E14F4E2821516AA700A7669F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E14F4E0021516AA000A7669F = {
+			isa = PBXGroup;
+			children = (
+				E14F4E0B21516AA000A7669F /* Awesome Rooms */,
+				E14F4E2321516AA700A7669F /* Awesome RoomsTests */,
+				E14F4E2E21516AA700A7669F /* Awesome RoomsUITests */,
+				E14F4E0A21516AA000A7669F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E14F4E0A21516AA000A7669F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E14F4E0921516AA000A7669F /* Awesome Rooms.app */,
+				E14F4E2021516AA700A7669F /* Awesome RoomsTests.xctest */,
+				E14F4E2B21516AA700A7669F /* Awesome RoomsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E14F4E0B21516AA000A7669F /* Awesome Rooms */ = {
+			isa = PBXGroup;
+			children = (
+				E14F4E0C21516AA000A7669F /* AppDelegate.swift */,
+				E14F4E0E21516AA000A7669F /* ViewController.swift */,
+				E14F4E1021516AA000A7669F /* Main.storyboard */,
+				E14F4E1621516AA700A7669F /* Assets.xcassets */,
+				E14F4E1821516AA700A7669F /* LaunchScreen.storyboard */,
+				E14F4E1B21516AA700A7669F /* Info.plist */,
+				E14F4E1321516AA000A7669F /* Awesome_Rooms.xcdatamodeld */,
+			);
+			path = "Awesome Rooms";
+			sourceTree = "<group>";
+		};
+		E14F4E2321516AA700A7669F /* Awesome RoomsTests */ = {
+			isa = PBXGroup;
+			children = (
+				E14F4E2421516AA700A7669F /* Awesome_RoomsTests.swift */,
+				E14F4E2621516AA700A7669F /* Info.plist */,
+			);
+			path = "Awesome RoomsTests";
+			sourceTree = "<group>";
+		};
+		E14F4E2E21516AA700A7669F /* Awesome RoomsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E14F4E2F21516AA700A7669F /* Awesome_RoomsUITests.swift */,
+				E14F4E3121516AA700A7669F /* Info.plist */,
+			);
+			path = "Awesome RoomsUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E14F4E0821516AA000A7669F /* Awesome Rooms */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E14F4E3421516AA700A7669F /* Build configuration list for PBXNativeTarget "Awesome Rooms" */;
+			buildPhases = (
+				E14F4E0521516AA000A7669F /* Sources */,
+				E14F4E0621516AA000A7669F /* Frameworks */,
+				E14F4E0721516AA000A7669F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Awesome Rooms";
+			productName = "Awesome Rooms";
+			productReference = E14F4E0921516AA000A7669F /* Awesome Rooms.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E14F4E1F21516AA700A7669F /* Awesome RoomsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E14F4E3721516AA700A7669F /* Build configuration list for PBXNativeTarget "Awesome RoomsTests" */;
+			buildPhases = (
+				E14F4E1C21516AA700A7669F /* Sources */,
+				E14F4E1D21516AA700A7669F /* Frameworks */,
+				E14F4E1E21516AA700A7669F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E14F4E2221516AA700A7669F /* PBXTargetDependency */,
+			);
+			name = "Awesome RoomsTests";
+			productName = "Awesome RoomsTests";
+			productReference = E14F4E2021516AA700A7669F /* Awesome RoomsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E14F4E2A21516AA700A7669F /* Awesome RoomsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E14F4E3A21516AA700A7669F /* Build configuration list for PBXNativeTarget "Awesome RoomsUITests" */;
+			buildPhases = (
+				E14F4E2721516AA700A7669F /* Sources */,
+				E14F4E2821516AA700A7669F /* Frameworks */,
+				E14F4E2921516AA700A7669F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E14F4E2D21516AA700A7669F /* PBXTargetDependency */,
+			);
+			name = "Awesome RoomsUITests";
+			productName = "Awesome RoomsUITests";
+			productReference = E14F4E2B21516AA700A7669F /* Awesome RoomsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E14F4E0121516AA000A7669F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Robert Cole";
+				TargetAttributes = {
+					E14F4E0821516AA000A7669F = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					E14F4E1F21516AA700A7669F = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = E14F4E0821516AA000A7669F;
+					};
+					E14F4E2A21516AA700A7669F = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = E14F4E0821516AA000A7669F;
+					};
+				};
+			};
+			buildConfigurationList = E14F4E0421516AA000A7669F /* Build configuration list for PBXProject "Awesome Rooms" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E14F4E0021516AA000A7669F;
+			productRefGroup = E14F4E0A21516AA000A7669F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E14F4E0821516AA000A7669F /* Awesome Rooms */,
+				E14F4E1F21516AA700A7669F /* Awesome RoomsTests */,
+				E14F4E2A21516AA700A7669F /* Awesome RoomsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E14F4E0721516AA000A7669F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E14F4E1A21516AA700A7669F /* LaunchScreen.storyboard in Resources */,
+				E14F4E1721516AA700A7669F /* Assets.xcassets in Resources */,
+				E14F4E1221516AA000A7669F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E14F4E1E21516AA700A7669F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E14F4E2921516AA700A7669F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E14F4E0521516AA000A7669F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E14F4E1521516AA000A7669F /* Awesome_Rooms.xcdatamodeld in Sources */,
+				E14F4E0F21516AA000A7669F /* ViewController.swift in Sources */,
+				E14F4E0D21516AA000A7669F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E14F4E1C21516AA700A7669F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E14F4E2521516AA700A7669F /* Awesome_RoomsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E14F4E2721516AA700A7669F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E14F4E3021516AA700A7669F /* Awesome_RoomsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E14F4E2221516AA700A7669F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E14F4E0821516AA000A7669F /* Awesome Rooms */;
+			targetProxy = E14F4E2121516AA700A7669F /* PBXContainerItemProxy */;
+		};
+		E14F4E2D21516AA700A7669F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E14F4E0821516AA000A7669F /* Awesome Rooms */;
+			targetProxy = E14F4E2C21516AA700A7669F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E14F4E1021516AA000A7669F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E14F4E1121516AA000A7669F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E14F4E1821516AA700A7669F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E14F4E1921516AA700A7669F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E14F4E3221516AA700A7669F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E14F4E3321516AA700A7669F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E14F4E3521516AA700A7669F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H2Y5Z822BP;
+				INFOPLIST_FILE = "Awesome Rooms/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.robertcole.Awesome-Rooms";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E14F4E3621516AA700A7669F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H2Y5Z822BP;
+				INFOPLIST_FILE = "Awesome Rooms/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.robertcole.Awesome-Rooms";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E14F4E3821516AA700A7669F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H2Y5Z822BP;
+				INFOPLIST_FILE = "Awesome RoomsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.robertcole.Awesome-RoomsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Awesome Rooms.app/Awesome Rooms";
+			};
+			name = Debug;
+		};
+		E14F4E3921516AA700A7669F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H2Y5Z822BP;
+				INFOPLIST_FILE = "Awesome RoomsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.robertcole.Awesome-RoomsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Awesome Rooms.app/Awesome Rooms";
+			};
+			name = Release;
+		};
+		E14F4E3B21516AA700A7669F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H2Y5Z822BP;
+				INFOPLIST_FILE = "Awesome RoomsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.robertcole.Awesome-RoomsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Awesome Rooms";
+			};
+			name = Debug;
+		};
+		E14F4E3C21516AA700A7669F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H2Y5Z822BP;
+				INFOPLIST_FILE = "Awesome RoomsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.robertcole.Awesome-RoomsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Awesome Rooms";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E14F4E0421516AA000A7669F /* Build configuration list for PBXProject "Awesome Rooms" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E14F4E3221516AA700A7669F /* Debug */,
+				E14F4E3321516AA700A7669F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E14F4E3421516AA700A7669F /* Build configuration list for PBXNativeTarget "Awesome Rooms" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E14F4E3521516AA700A7669F /* Debug */,
+				E14F4E3621516AA700A7669F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E14F4E3721516AA700A7669F /* Build configuration list for PBXNativeTarget "Awesome RoomsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E14F4E3821516AA700A7669F /* Debug */,
+				E14F4E3921516AA700A7669F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E14F4E3A21516AA700A7669F /* Build configuration list for PBXNativeTarget "Awesome RoomsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E14F4E3B21516AA700A7669F /* Debug */,
+				E14F4E3C21516AA700A7669F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E14F4E1321516AA000A7669F /* Awesome_Rooms.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E14F4E1421516AA000A7669F /* Awesome_Rooms.xcdatamodel */,
+			);
+			currentVersion = E14F4E1421516AA000A7669F /* Awesome_Rooms.xcdatamodel */;
+			path = Awesome_Rooms.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E14F4E0121516AA000A7669F /* Project object */;
+}
