@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		021303372155865100D3539E /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021303362155865100D3539E /* ReservationViewController.swift */; };
+		021303392155914600D3539E /* ReservationViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021303382155914600D3539E /* ReservationViewControllerDelegate.swift */; };
 		B58ADCEE21558C69002456E3 /* ConferenceRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58ADCEC21558C68002456E3 /* ConferenceRoom.swift */; };
 		B58ADCEF21558C69002456E3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58ADCED21558C69002456E3 /* Event.swift */; };
 		B58ADCF121558CBF002456E3 /* EventClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58ADCF021558CBF002456E3 /* EventClient.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		021303362155865100D3539E /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
+		021303382155914600D3539E /* ReservationViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewControllerDelegate.swift; sourceTree = "<group>"; };
 		B58ADCEC21558C68002456E3 /* ConferenceRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceRoom.swift; sourceTree = "<group>"; };
 		B58ADCED21558C69002456E3 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		B58ADCF021558CBF002456E3 /* EventClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventClient.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				E14F4E1321516AA000A7669F /* Awesome_Rooms.xcdatamodeld */,
 				021303362155865100D3539E /* ReservationViewController.swift */,
 				B58ADCF021558CBF002456E3 /* EventClient.swift */,
+				021303382155914600D3539E /* ReservationViewControllerDelegate.swift */,
 			);
 			path = "Awesome Rooms";
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				E14F4E0F21516AA000A7669F /* ViewController.swift in Sources */,
 				E14F4E0D21516AA000A7669F /* AppDelegate.swift in Sources */,
 				B58ADCEF21558C69002456E3 /* Event.swift in Sources */,
+				021303392155914600D3539E /* ReservationViewControllerDelegate.swift in Sources */,
 				021303372155865100D3539E /* ReservationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,7 +18,10 @@ class ReservationViewController: UIViewController {
 
     public var event: Event?
 
-    func setup(eventClient: EventClient, event: Event) {
+    var delegate: ReservationViewControllerDelegate?
+
+    func setup(delegate: ReservationViewControllerDelegate, eventClient: EventClient, event: Event) {
+        self.delegate = delegate
         self.eventClient = eventClient
         self.event = event
     }
@@ -51,17 +54,13 @@ class ReservationViewController: UIViewController {
         event.title = title
         event.description = description
 
-        eventClient?.createEvent(event, completionHandler: didCreateEvent, errorHandler: didNotCreateEvent)
+        eventClient?.createEvent(event, completionHandler: (delegate?.didCreateEvent)!, errorHandler: didNotCreateEvent)
     }
 
     func displayErrorPopup(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
-    }
-
-    func didCreateEvent() {
-        // TODO pop view back to main screen
     }
 
     func didNotCreateEvent(error: String) {
