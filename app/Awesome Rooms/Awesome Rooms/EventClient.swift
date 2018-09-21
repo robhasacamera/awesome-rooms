@@ -9,6 +9,7 @@
 import Foundation
 
 protocol EventClient {
-    func getEvents(completionHandler: ([Event]) -> (), errorHandler: (String) -> ())
-    func createEvent(_ event: Event, completionHandler: () -> (), errorHandler: (String) -> ())
+    func getEvents(completionHandler: @escaping ([Event]) -> (), errorHandler: @escaping (String) -> ())
+
+    func createEvent(_ event: Event, completionHandler: @escaping () -> (), errorHandler: @escaping (String) -> ())
 }
