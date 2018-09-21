@@ -66,7 +66,7 @@ class RoomStatusViewController: UIViewController, ReservationViewControllerDeleg
         // Do any additional setup after loading the view.
         topStack.addArrangedSubview(quickBookView)
         
-        eventClient = MockClient(scenario: .greenLightLessThanSixtyMins)
+        eventClient = MockClient(scenario: .yellowLight)
         
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (_) in
             self.eventClient?.getEvents(completionHandler: { (events) in
@@ -94,8 +94,11 @@ class RoomStatusViewController: UIViewController, ReservationViewControllerDeleg
             if now > firstEvent.startDateTime {
                 // display first event on top
                 setupMeetingInProgress(firstEvent)
-                
+
                 // display second event on bottom
+                if events.count > 1 {
+                    setupBottomView(events[1])
+                }
             } else {
                 // display message or buttons pending on timeframe
                 if timeUntilMeeting(firstEvent) > 15 {
@@ -107,6 +110,7 @@ class RoomStatusViewController: UIViewController, ReservationViewControllerDeleg
                 }
                 
                 // display first event on bottom
+                setupBottomView(firstEvent)
             }
         } else {
             // hide all views
@@ -116,7 +120,7 @@ class RoomStatusViewController: UIViewController, ReservationViewControllerDeleg
     
     func setupMessageView() {
         topMessageView.backgroundColor = UIColor.yellow
-        topMessageView.messageLabel.text = "Next Meeting WIll Begin Shortly"
+        topMessageView.messageLabel.text = "Next Meeting Will Begin Shortly"
         topStack.removeAllArrangedViews()
         topStack.addArrangedSubview(topMessageView)
     }
@@ -141,6 +145,16 @@ class RoomStatusViewController: UIViewController, ReservationViewControllerDeleg
         
         topStack.removeAllArrangedViews()
         topStack.addArrangedSubview(topMeetingView)
+    }
+
+    func setupBottomView(_ event: Event) {
+        bottomMeetingView.alpha = 0.5
+        bottomMeetingView.meetingStatusLabel.text = "Next Meeting: "
+        bottomMeetingView.meetingTitleLabel.text = event.title
+        bottomMeetingView.meetingTimeLabel.text = getMeetingTimes(event)
+
+        bottomStack.removeAllArrangedViews()
+        bottomStack.addArrangedSubview(bottomMeetingView)
     }
     
     var dateFormatter: DateFormatter {
