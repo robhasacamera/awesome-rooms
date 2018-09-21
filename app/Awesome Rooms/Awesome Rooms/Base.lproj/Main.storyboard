@@ -96,23 +96,23 @@
                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfe-MS-9WW">
+                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfe-MS-9WW">
                                     <rect key="frame" x="0.0" y="28" width="224" height="28"/>
-                                    <state key="normal" title="15"/>
+                                    <state key="normal" image="buttonGel15Min"/>
                                     <connections>
                                         <action selector="book15MinuteMeeting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S61-8C-Yg2"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YjR-XS-Ynf">
+                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YjR-XS-Ynf">
                                     <rect key="frame" x="0.0" y="56" width="224" height="28"/>
-                                    <state key="normal" title="30"/>
+                                    <state key="normal" image="buttonGel30Min"/>
                                     <connections>
                                         <action selector="book30MinuteMeeting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9IJ-EB-bUI"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkR-wn-ij8">
+                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkR-wn-ij8">
                                     <rect key="frame" x="0.0" y="84" width="224" height="28"/>
-                                    <state key="normal" title="60"/>
+                                    <state key="normal" image="buttonGel1Hour"/>
                                     <connections>
                                         <action selector="book60MinuteMeeting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1l7-Qg-bzw"/>
                                     </connections>
@@ -423,6 +423,9 @@
     </scenes>
     <resources>
         <image name="LeSabreEmblem" width="415" height="115"/>
+        <image name="buttonGel15Min" width="159" height="37"/>
+        <image name="buttonGel1Hour" width="159" height="37"/>
+        <image name="buttonGel30Min" width="159" height="37"/>
         <image name="masonsBgd" width="731" height="1033"/>
     </resources>
     <inferredMetricsTieBreakers>
