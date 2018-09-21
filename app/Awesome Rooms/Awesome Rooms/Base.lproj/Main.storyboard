@@ -225,10 +225,10 @@
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="-578.86056971514245"/>
         </scene>
-        <!--View Controller-->
+        <!--Title Clock View Controller-->
         <scene sceneID="lZN-VE-Mn7">
             <objects>
-                <viewController id="vMq-BY-nWi" sceneMemberID="viewController">
+                <viewController id="vMq-BY-nWi" customClass="TitleClockViewController" customModule="Awesome_Rooms" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="GRI-PC-POj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -257,6 +257,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EiX-F7-FWY"/>
                     </view>
+                    <connections>
+                        <outlet property="clockLabel" destination="YO7-qq-cJo" id="srq-Yu-jb9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EM9-fj-0DR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
