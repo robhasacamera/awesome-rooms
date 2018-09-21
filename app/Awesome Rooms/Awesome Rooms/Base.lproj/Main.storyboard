@@ -69,9 +69,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="cpA-iN-syq"/>
                     <connections>
+                        <outlet property="bottomMessageView" destination="4cG-34-MkK" id="PgZ-HK-umn"/>
                         <outlet property="bottomStack" destination="rO8-sq-pnA" id="3Fk-XQ-wph"/>
                         <outlet property="quickBookView" destination="fLx-ad-wte" id="nGt-lY-HQK"/>
+                        <outlet property="topMeetingView" destination="NtH-Ty-BH2" id="a2x-K7-iCC"/>
+                        <outlet property="topMessageView" destination="RYZ-6f-YLA" id="UC9-eF-2yO"/>
                         <outlet property="topStack" destination="cFi-9A-gA0" id="6us-L7-BCN"/>
+                        <segue destination="VLI-9k-3Ry" kind="show" identifier="BookMeetingSegue" id="hf4-Sv-XdA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -91,14 +95,23 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfe-MS-9WW">
                                     <rect key="frame" x="0.0" y="28" width="224" height="28"/>
                                     <state key="normal" title="15"/>
+                                    <connections>
+                                        <action selector="book15MinuteMeeting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S61-8C-Yg2"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YjR-XS-Ynf">
                                     <rect key="frame" x="0.0" y="56" width="224" height="28"/>
                                     <state key="normal" title="30"/>
+                                    <connections>
+                                        <action selector="book30MinuteMeeting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9IJ-EB-bUI"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkR-wn-ij8">
                                     <rect key="frame" x="0.0" y="84" width="224" height="28"/>
                                     <state key="normal" title="60"/>
+                                    <connections>
+                                        <action selector="book60MinuteMeeting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1l7-Qg-bzw"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -115,14 +128,152 @@
                 <view contentMode="scaleToFill" id="RYZ-6f-YLA" customClass="MessageView" customModule="Awesome_Rooms" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The next meeting will begin shortly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKb-DX-2xa">
+                            <rect key="frame" x="8" y="8" width="224" height="112"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ILY-x6-uHo" firstAttribute="bottom" secondItem="aKb-DX-2xa" secondAttribute="bottom" constant="8" id="NcP-w3-bqX"/>
+                        <constraint firstAttribute="trailing" secondItem="aKb-DX-2xa" secondAttribute="trailing" constant="8" id="Y7w-Kl-Khj"/>
+                        <constraint firstItem="aKb-DX-2xa" firstAttribute="top" secondItem="ILY-x6-uHo" secondAttribute="top" constant="8" id="s0F-oP-L07"/>
+                        <constraint firstItem="aKb-DX-2xa" firstAttribute="leading" secondItem="ILY-x6-uHo" secondAttribute="leading" constant="8" id="uY8-Y2-YWi"/>
+                    </constraints>
                     <viewLayoutGuide key="safeArea" id="ILY-x6-uHo"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="aKb-DX-2xa" id="qi8-fP-e5p"/>
+                    </connections>
                 </view>
                 <view contentMode="scaleToFill" id="NtH-Ty-BH2" customClass="MeetingView" customModule="Awesome_Rooms" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="F1M-EW-cQL">
+                            <rect key="frame" x="8" y="8" width="224" height="112"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fWH-Kp-rFN">
+                                    <rect key="frame" x="0.0" y="0.0" width="224" height="112"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ZBe-a3-5jo">
+                                            <rect key="frame" x="0.0" y="0.0" width="224" height="56"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meeting in progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rt4-pt-b1G">
+                                                    <rect key="frame" x="0.0" y="0.0" width="112" height="56"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00 AM - 12:00PM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxk-1o-Nzk">
+                                                    <rect key="frame" x="112" y="0.0" width="112" height="56"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meeting Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHM-cC-dOF">
+                                            <rect key="frame" x="0.0" y="56" width="224" height="56"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="JXx-Kd-c2N" firstAttribute="trailing" secondItem="F1M-EW-cQL" secondAttribute="trailing" constant="8" id="1oq-1j-P8d"/>
+                        <constraint firstAttribute="bottom" secondItem="F1M-EW-cQL" secondAttribute="bottom" constant="8" id="4ps-Gq-UPb"/>
+                        <constraint firstItem="F1M-EW-cQL" firstAttribute="top" secondItem="NtH-Ty-BH2" secondAttribute="top" constant="8" id="Q8o-po-jbC"/>
+                        <constraint firstItem="F1M-EW-cQL" firstAttribute="leading" secondItem="JXx-Kd-c2N" secondAttribute="leading" constant="8" id="tat-Qn-ZBo"/>
+                    </constraints>
                     <viewLayoutGuide key="safeArea" id="JXx-Kd-c2N"/>
+                    <connections>
+                        <outlet property="meetingStatusLabel" destination="Rt4-pt-b1G" id="TAa-mm-Tox"/>
+                        <outlet property="meetingTimeLabel" destination="Qxk-1o-Nzk" id="U1g-qY-m12"/>
+                        <outlet property="meetingTitleLabel" destination="yHM-cC-dOF" id="3RH-cI-caV"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" id="4cG-34-MkK" customClass="MessageView" customModule="Awesome_Rooms" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The next meeting will begin shortly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSp-p3-f6a">
+                            <rect key="frame" x="8" y="8" width="224" height="112"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="dSp-p3-f6a" firstAttribute="top" secondItem="MBR-zT-vYU" secondAttribute="top" constant="8" id="Jo3-om-VGb"/>
+                        <constraint firstItem="dSp-p3-f6a" firstAttribute="leading" secondItem="MBR-zT-vYU" secondAttribute="leading" constant="8" id="PMt-eH-4WI"/>
+                        <constraint firstItem="MBR-zT-vYU" firstAttribute="bottom" secondItem="dSp-p3-f6a" secondAttribute="bottom" constant="8" id="dQ6-LP-55a"/>
+                        <constraint firstAttribute="trailing" secondItem="dSp-p3-f6a" secondAttribute="trailing" constant="8" id="gua-pN-f4E"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="MBR-zT-vYU"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="dSp-p3-f6a" id="mte-SE-q4w"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" id="VuZ-bA-TIM" customClass="MeetingView" customModule="Awesome_Rooms" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Gih-7i-SLt">
+                            <rect key="frame" x="8" y="8" width="224" height="112"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BS5-7B-7r4">
+                                    <rect key="frame" x="0.0" y="0.0" width="224" height="112"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JBP-CY-MKk">
+                                            <rect key="frame" x="0.0" y="0.0" width="224" height="56"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meeting in progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDm-tV-mVI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="112" height="56"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00 AM - 12:00PM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZC-Bv-qmA">
+                                                    <rect key="frame" x="112" y="0.0" width="112" height="56"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meeting Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVo-nc-aQe">
+                                            <rect key="frame" x="0.0" y="56" width="224" height="56"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Gih-7i-SLt" firstAttribute="top" secondItem="VuZ-bA-TIM" secondAttribute="top" constant="8" id="5fb-94-UjP"/>
+                        <constraint firstItem="Gih-7i-SLt" firstAttribute="leading" secondItem="w45-4q-Iy6" secondAttribute="leading" constant="8" id="H1g-Rz-GIw"/>
+                        <constraint firstItem="w45-4q-Iy6" firstAttribute="trailing" secondItem="Gih-7i-SLt" secondAttribute="trailing" constant="8" id="bQa-A7-S63"/>
+                        <constraint firstAttribute="bottom" secondItem="Gih-7i-SLt" secondAttribute="bottom" constant="8" id="nSQ-4R-K8I"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="w45-4q-Iy6"/>
+                    <connections>
+                        <outlet property="meetingStatusLabel" destination="wDm-tV-mVI" id="SaO-C5-F8y"/>
+                        <outlet property="meetingTimeLabel" destination="NZC-Bv-qmA" id="nXt-z5-qkS"/>
+                        <outlet property="meetingTitleLabel" destination="PVo-nc-aQe" id="oDm-AC-jsg"/>
+                    </connections>
                 </view>
             </objects>
             <point key="canvasLocation" x="1076" y="119.1904047976012"/>
@@ -223,24 +374,24 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zsw-LX-giW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.59999999999999" y="-578.86056971514245"/>
+            <point key="canvasLocation" x="-636" y="-580"/>
         </scene>
         <!--Title Clock View Controller-->
         <scene sceneID="lZN-VE-Mn7">
             <objects>
                 <viewController id="vMq-BY-nWi" customClass="TitleClockViewController" customModule="Awesome_Rooms" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="GRI-PC-POj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
+                        <rect key="frame" x="0.0" y="0.0" width="359" height="195.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="1hG-4C-rXe">
-                                <rect key="frame" x="24" y="8" width="327" height="135"/>
+                                <rect key="frame" x="24" y="8" width="311" height="179.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LeSabreEmblem" translatesAutoresizingMaskIntoConstraints="NO" id="ITi-3f-xBk">
-                                        <rect key="frame" x="0.0" y="0.0" width="233.5" height="135"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="222" height="179.5"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YO7-qq-cJo">
-                                        <rect key="frame" x="233.5" y="0.0" width="93.5" height="135"/>
+                                        <rect key="frame" x="222" y="0.0" width="89" height="179.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -271,6 +422,6 @@
         <image name="masonsBgd" width="731" height="1033"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MTW-Cz-fxS"/>
+        <segue reference="pkI-M1-N6B"/>
     </inferredMetricsTieBreakers>
 </document>
