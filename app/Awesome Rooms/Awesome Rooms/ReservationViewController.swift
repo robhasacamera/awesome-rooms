@@ -35,6 +35,15 @@ class ReservationViewController: UIViewController {
     }
 
     @IBAction func clickedSubmit() {
-        eventClient.createEvent(title: titleTextField.text, description: descriptionTextView.text)
+        var event = Event(title: titleTextField.text, description: descriptionTextView.text)
+        eventClient.createEvent(event: event, completionHandler: didCreateEvent, errorHandler: didNotCreateEvent)
+    }
+
+    func didCreateEvent() {
+        
+    }
+
+    func didNotCreateEvent(error: Error) {
+        
     }
 }
