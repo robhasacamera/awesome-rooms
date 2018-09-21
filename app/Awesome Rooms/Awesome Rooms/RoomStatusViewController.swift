@@ -66,7 +66,7 @@ class RoomStatusViewController: UIViewController, ReservationViewControllerDeleg
         // Do any additional setup after loading the view.
         topStack.addArrangedSubview(quickBookView)
         
-        eventClient = MockClient(scenario: .greenLightLessThanSixtyMins)
+        eventClient = MockClient(scenario: .greenLightLessThanThirtyMins)
         
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (_) in
             self.eventClient?.getEvents(completionHandler: { (events) in
@@ -100,7 +100,7 @@ class RoomStatusViewController: UIViewController, ReservationViewControllerDeleg
                 // display message or buttons pending on timeframe
                 if timeUntilMeeting(firstEvent) > 15 {
                     // display buttons
-                    
+                    setupMeetingButtons(for: firstEvent)
                 } else {
                     // display message
                     setupMessageView()
@@ -113,6 +113,19 @@ class RoomStatusViewController: UIViewController, ReservationViewControllerDeleg
         }
     }
     
+    @IBOutlet weak var button15Minutes: UIButton!
+    @IBOutlet weak var button30Minutes: UIButton!
+    @IBOutlet weak var button60Minutes: UIButton!
+    
+    func setupMeetingButtons(for event: Event) {
+        let timeUntilEvent = timeUntilMeeting(event)
+        
+        button60Minutes.isEnabled = timeUntilEvent >= 60
+        button30Minutes.isEnabled = timeUntilEvent >= 30
+        
+        topStack.removeAllArrangedViews()
+        topStack.addArrangedSubview(quickBookView)
+    }
     
     func setupMessageView() {
         topMessageView.backgroundColor = UIColor.yellow

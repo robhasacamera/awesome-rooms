@@ -72,6 +72,9 @@
                         <outlet property="bottomMeetingView" destination="VuZ-bA-TIM" id="88Y-Ne-og3"/>
                         <outlet property="bottomMessageView" destination="4cG-34-MkK" id="PgZ-HK-umn"/>
                         <outlet property="bottomStack" destination="rO8-sq-pnA" id="3Fk-XQ-wph"/>
+                        <outlet property="button15Minutes" destination="dfe-MS-9WW" id="hbs-AL-X9q"/>
+                        <outlet property="button30Minutes" destination="YjR-XS-Ynf" id="BJW-qN-cq9"/>
+                        <outlet property="button60Minutes" destination="wkR-wn-ij8" id="zit-WM-hJX"/>
                         <outlet property="quickBookView" destination="fLx-ad-wte" id="nGt-lY-HQK"/>
                         <outlet property="topMeetingView" destination="NtH-Ty-BH2" id="a2x-K7-iCC"/>
                         <outlet property="topMessageView" destination="RYZ-6f-YLA" id="UC9-eF-2yO"/>
