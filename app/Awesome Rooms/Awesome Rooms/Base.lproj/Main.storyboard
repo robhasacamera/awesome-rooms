@@ -147,7 +147,7 @@
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book a Room" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHe-eX-4lW">
                                     <rect key="frame" x="0.0" y="0.0" width="224" height="28"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -188,17 +188,24 @@
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The next meeting will begin shortly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKb-DX-2xa">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yellowpane" translatesAutoresizingMaskIntoConstraints="NO" id="hq8-Nw-MSb">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The next meeting will begin shortly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKb-DX-2xa">
                             <rect key="frame" x="8" y="8" width="224" height="112"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="hq8-Nw-MSb" firstAttribute="bottom" secondItem="ILY-x6-uHo" secondAttribute="bottom" id="3sC-kX-c27"/>
+                        <constraint firstItem="hq8-Nw-MSb" firstAttribute="trailing" secondItem="ILY-x6-uHo" secondAttribute="trailing" id="H88-C5-Mrm"/>
                         <constraint firstItem="ILY-x6-uHo" firstAttribute="bottom" secondItem="aKb-DX-2xa" secondAttribute="bottom" constant="8" id="NcP-w3-bqX"/>
+                        <constraint firstItem="hq8-Nw-MSb" firstAttribute="top" secondItem="ILY-x6-uHo" secondAttribute="top" id="WcJ-3l-wiS"/>
                         <constraint firstAttribute="trailing" secondItem="aKb-DX-2xa" secondAttribute="trailing" constant="8" id="Y7w-Kl-Khj"/>
+                        <constraint firstItem="hq8-Nw-MSb" firstAttribute="leading" secondItem="ILY-x6-uHo" secondAttribute="leading" id="gfO-GO-Gj7"/>
                         <constraint firstItem="aKb-DX-2xa" firstAttribute="top" secondItem="ILY-x6-uHo" secondAttribute="top" constant="8" id="s0F-oP-L07"/>
                         <constraint firstItem="aKb-DX-2xa" firstAttribute="leading" secondItem="ILY-x6-uHo" secondAttribute="leading" constant="8" id="uY8-Y2-YWi"/>
                     </constraints>
@@ -211,6 +218,9 @@
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redpane" translatesAutoresizingMaskIntoConstraints="NO" id="EX7-oi-7O6">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="F1M-EW-cQL">
                             <rect key="frame" x="8" y="8" width="224" height="112"/>
                             <subviews>
@@ -222,22 +232,22 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meeting in progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rt4-pt-b1G">
                                                     <rect key="frame" x="0.0" y="0.0" width="112" height="56"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00 AM - 12:00PM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxk-1o-Nzk">
                                                     <rect key="frame" x="112" y="0.0" width="112" height="56"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meeting Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHM-cC-dOF">
                                             <rect key="frame" x="0.0" y="56" width="224" height="56"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -247,9 +257,13 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="EX7-oi-7O6" firstAttribute="leading" secondItem="JXx-Kd-c2N" secondAttribute="leading" id="1Ax-j6-pJJ"/>
                         <constraint firstItem="JXx-Kd-c2N" firstAttribute="trailing" secondItem="F1M-EW-cQL" secondAttribute="trailing" constant="8" id="1oq-1j-P8d"/>
                         <constraint firstAttribute="bottom" secondItem="F1M-EW-cQL" secondAttribute="bottom" constant="8" id="4ps-Gq-UPb"/>
+                        <constraint firstItem="EX7-oi-7O6" firstAttribute="trailing" secondItem="JXx-Kd-c2N" secondAttribute="trailing" id="Gmn-nD-Bp1"/>
+                        <constraint firstItem="EX7-oi-7O6" firstAttribute="bottom" secondItem="JXx-Kd-c2N" secondAttribute="bottom" id="Kpk-aF-Eam"/>
                         <constraint firstItem="F1M-EW-cQL" firstAttribute="top" secondItem="NtH-Ty-BH2" secondAttribute="top" constant="8" id="Q8o-po-jbC"/>
+                        <constraint firstItem="EX7-oi-7O6" firstAttribute="top" secondItem="JXx-Kd-c2N" secondAttribute="top" id="kJP-mv-U65"/>
                         <constraint firstItem="F1M-EW-cQL" firstAttribute="leading" secondItem="JXx-Kd-c2N" secondAttribute="leading" constant="8" id="tat-Qn-ZBo"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="JXx-Kd-c2N"/>
@@ -297,13 +311,13 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meeting in progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDm-tV-mVI">
                                                     <rect key="frame" x="0.0" y="0.0" width="112" height="56"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00 AM - 12:00PM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZC-Bv-qmA">
                                                     <rect key="frame" x="112" y="0.0" width="112" height="56"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -311,7 +325,7 @@
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meeting Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVo-nc-aQe">
                                             <rect key="frame" x="0.0" y="56" width="224" height="56"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -446,11 +460,11 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="1hG-4C-rXe">
                                 <rect key="frame" x="24" y="8" width="327" height="135"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LeSabreEmblem" translatesAutoresizingMaskIntoConstraints="NO" id="ITi-3f-xBk">
-                                        <rect key="frame" x="0.0" y="0.0" width="233.5" height="135"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmpireLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ITi-3f-xBk">
+                                        <rect key="frame" x="0.0" y="0.0" width="164" height="135"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YO7-qq-cJo">
-                                        <rect key="frame" x="233.5" y="0.0" width="93.5" height="135"/>
+                                        <rect key="frame" x="164" y="0.0" width="163" height="135"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -477,11 +491,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LeSabreEmblem" width="415" height="115"/>
+        <image name="EmpireLogo" width="167" height="68"/>
         <image name="buttonGel15Min" width="159" height="37"/>
         <image name="buttonGel1Hour" width="159" height="37"/>
         <image name="buttonGel30Min" width="159" height="37"/>
         <image name="masonsBgd" width="731" height="1033"/>
+        <image name="redpane" width="276" height="207"/>
+        <image name="yellowpane" width="276" height="207"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="MTW-Cz-fxS"/>
