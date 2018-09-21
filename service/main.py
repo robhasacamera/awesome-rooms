@@ -1,4 +1,4 @@
-import datetime, subprocess, os, threading, json
+import datetime, subprocess, os, threading, json, time
 from googleapiclient.discovery import build
 from httplib2 import Http
 from oauth2client import file, client, tools
@@ -20,43 +20,54 @@ event_cache = {"mob" : {
 							"apollo" : ["k3qvt79nvuaarrah6p8g1ra2g8@group.calendar.google.com"],
 							"skyhawk" : ["k3qvt79nvuaarrah6p8g1ra2g8@group.calendar.google.com"]
 					   }, 
-			   "aug" : {}, 
+			   "aug" : {
+							"pascal" : [None]
+					   }, 
 			   "atl" : {}, 
 			   "jbr" : {}, 
 			   "abq" : {}, 
 			   "okc" : {}}
 
 def main():
-	# Get the list of events and cache those hoes
 	global service
-	
-	#store = file.Storage('token.json')
-    #creds = store.get()
-    #if not creds or creds.invalid:
-    #    flow = client.flow_from_clientsecrets('credentials.json', SCOPES)
-    #    creds = tools.run_flow(flow, store)
 	
 	creds = service_account.Credentials.from_service_account_file("token.json", scopes=SCOPES)
 	service = build('calendar', 'v3', credentials=creds)
-
-	#service = build('calendar', 'v3', developerKey='AIzaSyALZv-d7A8qZ05dDsbdPv8O6wYlIkmKHJI')
+			
+def get_events():
+	print("Refreshing events...")
+	for city in event_cache.keys():
+		for room in event_cache[city].keys():
+			if event_cache[city][room][0] is not None:
+				events = get_event(event_cache[city][room][0])
+				for event in events:
+					processed_event = {}
+					processed_event["start"] = event["start"]["dateTime"]
+					processed_event["end"] = event["end"]["dateTime"]
+					processed_event["name"] = event["summary"]
+					if processed_event not in event_cache[city][room]:
+						event_cache[city][room].append(processed_event)
+			print("Events cached for " + city + '/' + room + ": " + str(len(event_cache[city][room]) - 1))
+	print("Events refreshed!")
+				
+def clear_old_events():
+	now = datetime.datetime.now().isoformat() + '-0500' # 'Z' indicates UTC time
 	
 	for city in event_cache.keys():
 		for room in event_cache[city].keys():
-			events = get_event(event_cache[city][room][0])
-			for event in events:
-				processed_event = {}
-				processed_event["start"] = event["start"]["dateTime"]
-				processed_event["end"] = event["end"]["dateTime"]
-				processed_event["name"] = event["summary"]
-				event_cache[city][room].append(processed_event)
-				
+			to_remove = []
+			for event in event_cache[city][room][1:]:
+				if (event["start"] < now):
+					to_remove.append(event)
+			for rem in to_remove:
+				event_cache[city][room].remove(rem)
+			
 def get_event(id):
 	global service
 	
-	now = datetime.datetime.utcnow().isoformat() + 'Z' # 'Z' indicates UTC time
+	now = datetime.datetime.now().isoformat() + '-0500' # 'Z' indicates UTC time
 
-	events_result = service.events().list(calendarId=id, timeMin=now, maxResults=1, singleEvents=True, orderBy='startTime').execute()
+	events_result = service.events().list(calendarId=id, timeMin=now, maxResults=10, singleEvents=True, orderBy='startTime').execute()
 	events = events_result.get('items', [])
 	
 	return events
@@ -120,7 +131,14 @@ def add():
 	
 	return "", 201
 		
+def thread():
+	while True:
+		clear_old_events()
+		get_events()
+		time.sleep(10)
+		
 if __name__ == '__main__':
 	main()
+	threading.Thread(target=thread).start()
 	app.run(host="0.0.0.0")
 	#app.run(host="45.33.102.224")
