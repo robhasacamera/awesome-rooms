@@ -35,7 +35,7 @@
         <!--Book Meeting-->
         <scene sceneID="XbT-1f-fYt">
             <objects>
-                <viewController id="VLI-9k-3Ry" sceneMemberID="viewController">
+                <viewController id="VLI-9k-3Ry" customClass="ReservationViewController" customModule="Awesome_Rooms" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oYC-Se-lTk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,9 +90,17 @@
                         <viewLayoutGuide key="safeArea" id="zYL-L3-WJ0"/>
                     </view>
                     <navigationItem key="navigationItem" title="Book Meeting" id="DKn-vX-Ahd">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="dgV-cx-jFQ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="dgV-cx-jFQ">
+                            <connections>
+                                <action selector="clickedSubmit" destination="VLI-9k-3Ry" id="E8W-6c-Tde"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="DJF-m3-rLu" id="edu-zF-l25"/>
+                        <outlet property="titleTextField" destination="1al-s9-cm6" id="cJL-q8-QDv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFU-GR-ggr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
