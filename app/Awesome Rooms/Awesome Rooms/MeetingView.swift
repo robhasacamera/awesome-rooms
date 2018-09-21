@@ -10,12 +10,10 @@ import UIKit
 
 class MeetingView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+    @IBOutlet weak var meetingStatusLabel: UILabel!
+    
+    @IBOutlet weak var meetingTimeLabel: UILabel!
+    
+    @IBOutlet weak var meetingTitleLabel: UILabel!
+    
 }
