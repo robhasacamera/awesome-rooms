@@ -2,7 +2,7 @@ import datetime, subprocess, os, threading, json
 from googleapiclient.discovery import build
 from httplib2 import Http
 from oauth2client import file, client, tools
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request, abort
 
 # If modifying these scopes, delete the file token.json.
 app = Flask(__name__)
@@ -34,9 +34,11 @@ def main():
 		for room in event_cache[city].keys():
 			events = get_event(event_cache[city][room][0])
 			for event in events:
-				event_cache[city][room].append(event)
-				
-	print(event_cache)
+				processed_event = {}
+				processed_event["start"] = event["start"]["dateTime"]
+				processed_event["end"] = event["end"]["dateTime"]
+				processed_event["name"] = event["summary"]
+				event_cache[city][room].append(processed_event)
 				
 def get_event(id):
 	global service
@@ -51,6 +53,20 @@ def get_event(id):
 @app.route("/devjam/echo", methods=['GET'])
 def echo():
 	return "Yeah yeah, I'm here."
+	
+@app.route("/devjam/list", methods=['GET'])
+def list():
+	city = request.args.get("city")
+	room = request.args.get("room")
+	
+	if city in event_cache.keys():
+		if room in event_cache[city].keys():
+			print(event_cache[city][room])
+			events = event_cache[city][room]
+			if len(events)> 1:
+				return json.dumps(events[1])
+			else:
+				return ""
 	
 def main3():
 
