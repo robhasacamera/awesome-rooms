@@ -10,6 +10,12 @@ import Foundation
 
 class GoogleClient: EventClient {
     
+    struct WebserviceEvent: Codable {
+        let name: String
+        let start: String
+        let end: String
+    }
+    
     let webserviceUrl = "http://devjam.seltzer.tech:5000/devjam/list?city=mob&room=empire"
     
     func getEvents(completionHandler: @escaping ([Event]) -> (), errorHandler: @escaping (String) -> ()) {
@@ -25,9 +31,12 @@ class GoogleClient: EventClient {
                     errorHandler(error.localizedDescription)
                 } else if let jsonData = data {
                     let decoder = JSONDecoder()
-
+                    decoder.dateDecodingStrategy = .iso8601
+                    
                     do {
+                        print(String(data: jsonData, encoding: String.Encoding.utf8) as String!)
                         let events = try decoder.decode([Event].self, from: jsonData)
+                        
                         completionHandler(events)
                     } catch {
                         errorHandler("Could not decode JSON")
@@ -47,6 +56,7 @@ class GoogleClient: EventClient {
         request.httpMethod = "POST"
 
         let encoder = JSONEncoder()
+        encoder.dateEncodingStrategy = .iso8601
         do {
             let jsonData = try encoder.encode(event)
             request.httpBody = jsonData

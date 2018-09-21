@@ -10,9 +10,18 @@ import Foundation
 
 struct Event: Codable {
     var title: String?
-    var city: String = "mob"
-    var description: String
+    var city: String? = "mob"
+    var description: String?
     var startDateTime: Date
     var endDateTime: Date
-    var conferenceRoom: ConferenceRoom
+    var conferenceRoom: ConferenceRoom?
+    
+    enum CodingKeys: String, CodingKey {
+        case title = "name"
+        case city
+        case description
+        case startDateTime = "start"
+        case endDateTime = "end"
+        case conferenceRoom
+    }
 }
