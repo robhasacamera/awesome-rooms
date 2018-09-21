@@ -85,4 +85,4 @@ def main3():
 		
 if __name__ == '__main__':
 	main()
-	app.run(host="0.0.0.0")
+	app.run(host="45.33.102.224 ")
