@@ -98,6 +98,8 @@ class RoomStatusViewController: UIViewController, ReservationViewControllerDeleg
                 // display second event on bottom
                 if events.count > 1 {
                     setupBottomView(events[1])
+                } else {
+                    bottomStack.removeAllArrangedViews()
                 }
             } else {
                 // display message or buttons pending on timeframe
@@ -226,21 +228,33 @@ class RoomStatusViewController: UIViewController, ReservationViewControllerDeleg
      }
  
     @IBAction func setupGreenLight(_ sender: Any) {
+        self.eventClient = MockClient(scenario: .greenLight)
+        refresh()
     }
     
     @IBAction func setupGreenLightLessThen60(_ sender: Any) {
+        self.eventClient = MockClient(scenario: .greenLightLessThanSixtyMins)
+        refresh()
     }
     
     @IBAction func setupGreenLightLessThen30(_ sender: Any) {
+        self.eventClient = MockClient(scenario: .greenLightLessThanThirtyMins)
+        refresh()
     }
     
     @IBAction func setupYellowLight(_ sender: Any) {
+        self.eventClient = MockClient(scenario: .yellowLight)
+        refresh()
     }
     
     @IBAction func setupRedLight(_ sender: Any) {
+        self.eventClient = MockClient(scenario: .redLight)
+        refresh()
     }
     
     @IBAction func setupLive(_ sender: Any) {
+        self.eventClient = GoogleClient()
+        refresh()
     }
 }
 
