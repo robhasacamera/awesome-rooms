@@ -48,6 +48,10 @@ def get_event(id):
 	
 	return events
 	
+@app.route("/devjam/echo", methods=['GET'])
+def echo():
+	return "Yeah yeah, I'm here."
+	
 def main3():
 
 	# Call the Calendar API
