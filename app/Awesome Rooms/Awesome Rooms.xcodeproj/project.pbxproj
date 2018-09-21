@@ -12,6 +12,7 @@
 		B58ADCEE21558C69002456E3 /* ConferenceRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58ADCEC21558C68002456E3 /* ConferenceRoom.swift */; };
 		B58ADCEF21558C69002456E3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58ADCED21558C69002456E3 /* Event.swift */; };
 		B58ADCF121558CBF002456E3 /* EventClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58ADCF021558CBF002456E3 /* EventClient.swift */; };
+		B58ADCF521559A30002456E3 /* MockClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58ADCF421559A30002456E3 /* MockClient.swift */; };
 		E14F4E0D21516AA000A7669F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F4E0C21516AA000A7669F /* AppDelegate.swift */; };
 		E14F4E0F21516AA000A7669F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F4E0E21516AA000A7669F /* ViewController.swift */; };
 		E14F4E1221516AA000A7669F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14F4E1021516AA000A7669F /* Main.storyboard */; };
@@ -21,6 +22,8 @@
 		E14F4E2521516AA700A7669F /* Awesome_RoomsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F4E2421516AA700A7669F /* Awesome_RoomsTests.swift */; };
 		E14F4E3021516AA700A7669F /* Awesome_RoomsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F4E2F21516AA700A7669F /* Awesome_RoomsUITests.swift */; };
 		E184E2F1215596CF00F595F1 /* TitleClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E184E2F0215596CF00F595F1 /* TitleClockViewController.swift */; };
+		E184E2F32155987500F595F1 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E184E2F22155987500F595F1 /* MessageView.swift */; };
+		E184E2F5215598F100F595F1 /* MeetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E184E2F4215598F100F595F1 /* MeetingView.swift */; };
 		E1CA7B93215592EA000F1680 /* QuickBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA7B92215592EA000F1680 /* QuickBookView.swift */; };
 		E1CA7B9521559391000F1680 /* RoomStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA7B9421559391000F1680 /* RoomStatusViewController.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +51,7 @@
 		B58ADCEC21558C68002456E3 /* ConferenceRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceRoom.swift; sourceTree = "<group>"; };
 		B58ADCED21558C69002456E3 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		B58ADCF021558CBF002456E3 /* EventClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventClient.swift; sourceTree = "<group>"; };
+		B58ADCF421559A30002456E3 /* MockClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockClient.swift; sourceTree = "<group>"; };
 		E14F4E0921516AA000A7669F /* Awesome Rooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Awesome Rooms.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14F4E0C21516AA000A7669F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E14F4E0E21516AA000A7669F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 		E14F4E2F21516AA700A7669F /* Awesome_RoomsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Awesome_RoomsUITests.swift; sourceTree = "<group>"; };
 		E14F4E3121516AA700A7669F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E184E2F0215596CF00F595F1 /* TitleClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleClockViewController.swift; sourceTree = "<group>"; };
+		E184E2F22155987500F595F1 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		E184E2F4215598F100F595F1 /* MeetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingView.swift; sourceTree = "<group>"; };
 		E1CA7B92215592EA000F1680 /* QuickBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickBookView.swift; sourceTree = "<group>"; };
 		E1CA7B9421559391000F1680 /* RoomStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomStatusViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,10 +123,13 @@
 			children = (
 				B58ADCEC21558C68002456E3 /* ConferenceRoom.swift */,
 				B58ADCED21558C69002456E3 /* Event.swift */,
+				B58ADCF421559A30002456E3 /* MockClient.swift */,
 				E14F4E0C21516AA000A7669F /* AppDelegate.swift */,
 				E14F4E0E21516AA000A7669F /* ViewController.swift */,
 				E14F4E1021516AA000A7669F /* Main.storyboard */,
 				E184E2F0215596CF00F595F1 /* TitleClockViewController.swift */,
+				E184E2F22155987500F595F1 /* MessageView.swift */,
+				E184E2F4215598F100F595F1 /* MeetingView.swift */,
 				E14F4E1621516AA700A7669F /* Assets.xcassets */,
 				E14F4E1821516AA700A7669F /* LaunchScreen.storyboard */,
 				E14F4E1B21516AA700A7669F /* Info.plist */,
@@ -283,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E184E2F32155987500F595F1 /* MessageView.swift in Sources */,
 				B58ADCF121558CBF002456E3 /* EventClient.swift in Sources */,
 				E1CA7B93215592EA000F1680 /* QuickBookView.swift in Sources */,
 				B58ADCEE21558C69002456E3 /* ConferenceRoom.swift in Sources */,
@@ -294,6 +304,8 @@
 				B58ADCEF21558C69002456E3 /* Event.swift in Sources */,
 				021303392155914600D3539E /* ReservationViewControllerDelegate.swift in Sources */,
 				021303372155865100D3539E /* ReservationViewController.swift in Sources */,
+				B58ADCF521559A30002456E3 /* MockClient.swift in Sources */,
+				E184E2F5215598F100F595F1 /* MeetingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

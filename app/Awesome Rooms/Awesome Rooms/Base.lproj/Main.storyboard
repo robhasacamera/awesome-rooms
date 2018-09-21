@@ -112,13 +112,13 @@
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="kzk-ja-nRh"/>
                 </view>
-                <view contentMode="scaleToFill" id="RYZ-6f-YLA">
+                <view contentMode="scaleToFill" id="RYZ-6f-YLA" customClass="MessageView" customModule="Awesome_Rooms" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <viewLayoutGuide key="safeArea" id="ILY-x6-uHo"/>
                 </view>
-                <view contentMode="scaleToFill" id="NtH-Ty-BH2">
+                <view contentMode="scaleToFill" id="NtH-Ty-BH2" customClass="MeetingView" customModule="Awesome_Rooms" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
