@@ -69,6 +69,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="cpA-iN-syq"/>
                     <connections>
+                        <outlet property="bottomMeetingView" destination="VuZ-bA-TIM" id="88Y-Ne-og3"/>
                         <outlet property="bottomMessageView" destination="4cG-34-MkK" id="PgZ-HK-umn"/>
                         <outlet property="bottomStack" destination="rO8-sq-pnA" id="3Fk-XQ-wph"/>
                         <outlet property="quickBookView" destination="fLx-ad-wte" id="nGt-lY-HQK"/>

@@ -10,8 +10,6 @@ import UIKit
 
 class RoomStatusViewController: UIViewController, ReservationViewControllerDelegate {
     
-    
-    
     @IBOutlet weak var topStack: UIStackView!
     
     @IBOutlet weak var bottomStack: UIStackView!
@@ -28,28 +26,37 @@ class RoomStatusViewController: UIViewController, ReservationViewControllerDeleg
     
     var eventClient: EventClient?
     
-    let eventToCreate: Event?
+    var eventToCreate: Event?
     
-    func createEvent(withLength: Int) -> Event {
+    var events = [Event]()
+    
+    func createEvent(withLength minutes: Int) -> Event {
         let now = Date()
         
         let calendar = Calendar.current
         
+        let later = calendar.date(byAdding: .minute, value: minutes, to: now)!
         
+        let event = Event(title: nil, city: "mob", description: "", startDateTime: now, endDateTime: later, conferenceRoom: .leSabre)
         
+        return event
     }
     
     @IBAction func book15MinuteMeeting(_ sender: Any) {
-        
+        eventToCreate = createEvent(withLength: 15)
         
         performSegue(withIdentifier: "BookMeetingSegue", sender: nil)
     }
     
     @IBAction func book30MinuteMeeting(_ sender: Any) {
+        eventToCreate = createEvent(withLength: 30)
+        
         performSegue(withIdentifier: "BookMeetingSegue", sender: nil)
     }
     
     @IBAction func book60MinuteMeeting(_ sender: Any) {
+        eventToCreate = createEvent(withLength: 60)
+        
         performSegue(withIdentifier: "BookMeetingSegue", sender: nil)
     }
     
@@ -58,6 +65,96 @@ class RoomStatusViewController: UIViewController, ReservationViewControllerDeleg
         
         // Do any additional setup after loading the view.
         topStack.addArrangedSubview(quickBookView)
+        
+        eventClient = MockClient(scenario: .greenLightLessThanSixtyMins)
+        
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (_) in
+            self.eventClient?.getEvents(completionHandler: { (events) in
+                self.events = events.sorted(by: { (lhs, rhs) -> Bool in
+                    lhs.startDateTime < rhs.startDateTime
+                })
+                
+                self.events = self.events.filter({ (event) -> Bool in
+                    let now = Date()
+                    
+                    return event.endDateTime > now
+                })
+                
+                self.refresh()
+            }, errorHandler: { (errorMessage) in
+                print("\(errorMessage)")
+            })
+        }
+    }
+    
+    func refresh() {
+        let now = Date()
+        
+        if let firstEvent = events.first {
+            if now > firstEvent.startDateTime {
+                // display first event on top
+                setupMeetingInProgress(firstEvent)
+                
+                // display second event on bottom
+            } else {
+                // display message or buttons pending on timeframe
+                if timeUntilMeeting(firstEvent) > 15 {
+                    // display buttons
+                    
+                } else {
+                    // display message
+                    setupMessageView()
+                }
+                
+                // display first event on bottom
+            }
+        } else {
+            // hide all views
+        }
+    }
+    
+    
+    func setupMessageView() {
+        topMessageView.backgroundColor = UIColor.yellow
+        topMessageView.messageLabel.text = "Next Meeting WIll Begin Shortly"
+        topStack.removeAllArrangedViews()
+        topStack.addArrangedSubview(topMessageView)
+    }
+    
+    func timeUntilMeeting(_ event: Event) -> Int {
+        let calendar = Calendar.current
+        
+        let now = Date()
+        
+        let endTime = event.startDateTime
+        
+        let components = calendar.dateComponents([.minute], from: now, to: endTime)
+        
+        return components.minute!
+    }
+    
+    func setupMeetingInProgress(_ event: Event) {
+        topMeetingView.backgroundColor = UIColor.red
+        topMeetingView.meetingStatusLabel.text = "Meeting in Progress"
+        topMeetingView.meetingTitleLabel.text = event.title
+        topMeetingView.meetingTimeLabel.text = getMeetingTimes(event)
+        
+        topStack.removeAllArrangedViews()
+        topStack.addArrangedSubview(topMeetingView)
+    }
+    
+    var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "h:mm a"
+        return formatter
+    }
+    
+    func getMeetingTimes(_ event: Event) -> String {
+        let startTime = dateFormatter.string(from: event.startDateTime)
+        let endTime = dateFormatter.string(from: event.endDateTime)
+        
+        
+        return "\(startTime) - \(endTime)"
     }
     
     override func didReceiveMemoryWarning() {
@@ -86,13 +183,31 @@ class RoomStatusViewController: UIViewController, ReservationViewControllerDeleg
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let controller = segue.destination as? ReservationViewController, let eventClient = eventClient {
-            controller?.setup(delegate: self, eventClient: eventClient, event: <#T##Event#>)
+        guard let controller = segue.destination as? ReservationViewController else {
+            return
         }
         
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
+        guard let eventClient = eventClient else {
+            return
+        }
+        
+        guard let event = eventToCreate else {
+            return
+        }
+        
+        controller.setup(delegate: self, eventClient: eventClient, event: event)
      }
  
     
+}
+
+extension UIStackView {
+    func removeAllArrangedViews() {
+        let subviews = self.subviews
+        
+        for view in subviews {
+            self.removeArrangedSubview(view)
+            view.removeFromSuperview()
+        }
+    }
 }
