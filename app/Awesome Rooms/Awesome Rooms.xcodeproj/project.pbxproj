@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		021303372155865100D3539E /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021303362155865100D3539E /* ReservationViewController.swift */; };
+		B58ADCEE21558C69002456E3 /* ConferenceRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58ADCEC21558C68002456E3 /* ConferenceRoom.swift */; };
+		B58ADCEF21558C69002456E3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58ADCED21558C69002456E3 /* Event.swift */; };
 		E14F4E0D21516AA000A7669F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F4E0C21516AA000A7669F /* AppDelegate.swift */; };
 		E14F4E0F21516AA000A7669F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F4E0E21516AA000A7669F /* ViewController.swift */; };
 		E14F4E1221516AA000A7669F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14F4E1021516AA000A7669F /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		021303362155865100D3539E /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
+		B58ADCEC21558C68002456E3 /* ConferenceRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceRoom.swift; sourceTree = "<group>"; };
+		B58ADCED21558C69002456E3 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		E14F4E0921516AA000A7669F /* Awesome Rooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Awesome Rooms.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14F4E0C21516AA000A7669F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E14F4E0E21516AA000A7669F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 		E14F4E0B21516AA000A7669F /* Awesome Rooms */ = {
 			isa = PBXGroup;
 			children = (
+				B58ADCEC21558C68002456E3 /* ConferenceRoom.swift */,
+				B58ADCED21558C69002456E3 /* Event.swift */,
 				E14F4E0C21516AA000A7669F /* AppDelegate.swift */,
 				E14F4E0E21516AA000A7669F /* ViewController.swift */,
 				E14F4E1021516AA000A7669F /* Main.storyboard */,
@@ -262,9 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B58ADCEE21558C69002456E3 /* ConferenceRoom.swift in Sources */,
 				E14F4E1521516AA000A7669F /* Awesome_Rooms.xcdatamodeld in Sources */,
 				E14F4E0F21516AA000A7669F /* ViewController.swift in Sources */,
 				E14F4E0D21516AA000A7669F /* AppDelegate.swift in Sources */,
+				B58ADCEF21558C69002456E3 /* Event.swift in Sources */,
 				021303372155865100D3539E /* ReservationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
