@@ -14,14 +14,13 @@ class ReservationViewController: UIViewController {
 
     @IBOutlet var descriptionTextView: UITextView?
 
-    var eventClient: EventClient?
+    public var eventClient: EventClient?
 
-    init(eventClient: EventClient) {
-        this.eventClient = eventClient
-    }
+    public var event: Event?
 
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    func setup(eventClient: EventClient, event: Event) {
+        self.eventClient = eventClient
+        self.event = event
     }
 
     override func viewDidLoad() {
@@ -35,15 +34,37 @@ class ReservationViewController: UIViewController {
     }
 
     @IBAction func clickedSubmit() {
-        var event = Event(title: titleTextField.text, description: descriptionTextView.text)
-        eventClient.createEvent(event: event, completionHandler: didCreateEvent, errorHandler: didNotCreateEvent)
+        guard var event = event else {
+            return
+        }
+
+        guard let title = titleTextField?.text else {
+            displayErrorPopup(title: "Error", message: "You must enter a title.")
+            return
+        }
+
+        guard let description = descriptionTextView?.text else {
+            displayErrorPopup(title: "Error", message: "You must enter a description.")
+            return
+        }
+
+        event.title = title
+        event.description = description
+
+        eventClient?.createEvent(event, completionHandler: didCreateEvent, errorHandler: didNotCreateEvent)
+    }
+
+    func displayErrorPopup(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 
     func didCreateEvent() {
-        
+        // TODO pop view back to main screen
     }
 
-    func didNotCreateEvent(error: Error) {
-        
+    func didNotCreateEvent(error: String) {
+        displayErrorPopup(title: "Error", message: error)
     }
 }
