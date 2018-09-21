@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		021303372155865100D3539E /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021303362155865100D3539E /* ReservationViewController.swift */; };
 		021303392155914600D3539E /* ReservationViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021303382155914600D3539E /* ReservationViewControllerDelegate.swift */; };
+		0213033D2155A17400D3539E /* GoogleClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0213033C2155A17400D3539E /* GoogleClient.swift */; };
 		B58ADCEE21558C69002456E3 /* ConferenceRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58ADCEC21558C68002456E3 /* ConferenceRoom.swift */; };
 		B58ADCEF21558C69002456E3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58ADCED21558C69002456E3 /* Event.swift */; };
 		B58ADCF121558CBF002456E3 /* EventClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58ADCF021558CBF002456E3 /* EventClient.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		021303362155865100D3539E /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
 		021303382155914600D3539E /* ReservationViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewControllerDelegate.swift; sourceTree = "<group>"; };
+		0213033C2155A17400D3539E /* GoogleClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleClient.swift; sourceTree = "<group>"; };
 		B58ADCEC21558C68002456E3 /* ConferenceRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceRoom.swift; sourceTree = "<group>"; };
 		B58ADCED21558C69002456E3 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		B58ADCF021558CBF002456E3 /* EventClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventClient.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				021303382155914600D3539E /* ReservationViewControllerDelegate.swift */,
 				E1CA7B92215592EA000F1680 /* QuickBookView.swift */,
 				E1CA7B9421559391000F1680 /* RoomStatusViewController.swift */,
+				0213033C2155A17400D3539E /* GoogleClient.swift */,
 			);
 			path = "Awesome Rooms";
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				021303392155914600D3539E /* ReservationViewControllerDelegate.swift in Sources */,
 				021303372155865100D3539E /* ReservationViewController.swift in Sources */,
 				B58ADCF521559A30002456E3 /* MockClient.swift in Sources */,
+				0213033D2155A17400D3539E /* GoogleClient.swift in Sources */,
 				E184E2F5215598F100F595F1 /* MeetingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
