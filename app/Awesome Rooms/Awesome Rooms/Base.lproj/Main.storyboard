@@ -47,7 +47,62 @@
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ra2-eU-B5S">
                                                 <rect key="frame" x="0.0" y="151" width="375" height="150.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PQJ-kj-uqr">
+                                                        <rect key="frame" x="8" y="8" width="359" height="134.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gh-Dt-q2S">
+                                                                <rect key="frame" x="0.0" y="0.0" width="359" height="22"/>
+                                                                <state key="normal" title="greenLight"/>
+                                                                <connections>
+                                                                    <action selector="setupGreenLight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f2c-3v-qN3"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPZ-Rd-KQD">
+                                                                <rect key="frame" x="0.0" y="22" width="359" height="22.5"/>
+                                                                <state key="normal" title="greenLightLessThen60"/>
+                                                                <connections>
+                                                                    <action selector="setupGreenLightLessThen60:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cFb-FG-pO3"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rkg-kz-Z86">
+                                                                <rect key="frame" x="0.0" y="44.5" width="359" height="22.5"/>
+                                                                <state key="normal" title="greenLightLessThen30"/>
+                                                                <connections>
+                                                                    <action selector="setupGreenLightLessThen30:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RWm-ju-7f3"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3i-Uo-DWE">
+                                                                <rect key="frame" x="0.0" y="67" width="359" height="22.5"/>
+                                                                <state key="normal" title="yellowLight"/>
+                                                                <connections>
+                                                                    <action selector="setupYellowLight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CRr-kh-DUo"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HoD-UY-bKH">
+                                                                <rect key="frame" x="0.0" y="89.5" width="359" height="22.5"/>
+                                                                <state key="normal" title="redLight"/>
+                                                                <connections>
+                                                                    <action selector="setupRedLight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J69-19-pNy"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gA-kF-EOe">
+                                                                <rect key="frame" x="0.0" y="112" width="359" height="22.5"/>
+                                                                <state key="normal" title="live"/>
+                                                                <connections>
+                                                                    <action selector="setupLive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NHh-qb-Ng6"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="PQJ-kj-uqr" firstAttribute="leading" secondItem="Ra2-eU-B5S" secondAttribute="leading" constant="8" id="0jM-wJ-yZC"/>
+                                                    <constraint firstAttribute="trailing" secondItem="PQJ-kj-uqr" secondAttribute="trailing" constant="8" id="AZN-sg-jGd"/>
+                                                    <constraint firstAttribute="bottom" secondItem="PQJ-kj-uqr" secondAttribute="bottom" constant="8" id="iNE-T1-yvY"/>
+                                                    <constraint firstItem="PQJ-kj-uqr" firstAttribute="top" secondItem="Ra2-eU-B5S" secondAttribute="top" constant="8" id="idQ-vT-a7N"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                     </stackView>
@@ -378,24 +433,24 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zsw-LX-giW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-636" y="-580"/>
+            <point key="canvasLocation" x="65" y="237"/>
         </scene>
         <!--Title Clock View Controller-->
         <scene sceneID="lZN-VE-Mn7">
             <objects>
                 <viewController id="vMq-BY-nWi" customClass="TitleClockViewController" customModule="Awesome_Rooms" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="GRI-PC-POj">
-                        <rect key="frame" x="0.0" y="0.0" width="359" height="195.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="1hG-4C-rXe">
-                                <rect key="frame" x="24" y="8" width="311" height="179.5"/>
+                                <rect key="frame" x="24" y="8" width="327" height="135"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LeSabreEmblem" translatesAutoresizingMaskIntoConstraints="NO" id="ITi-3f-xBk">
-                                        <rect key="frame" x="0.0" y="0.0" width="222" height="179.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="233.5" height="135"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YO7-qq-cJo">
-                                        <rect key="frame" x="222" y="0.0" width="89" height="179.5"/>
+                                        <rect key="frame" x="233.5" y="0.0" width="93.5" height="135"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -429,6 +484,6 @@
         <image name="masonsBgd" width="731" height="1033"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pkI-M1-N6B"/>
+        <segue reference="MTW-Cz-fxS"/>
     </inferredMetricsTieBreakers>
 </document>

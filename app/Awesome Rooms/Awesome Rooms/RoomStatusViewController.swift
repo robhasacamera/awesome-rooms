@@ -211,7 +211,23 @@ class RoomStatusViewController: UIViewController, ReservationViewControllerDeleg
         controller.setup(delegate: self, eventClient: eventClient, event: event)
      }
  
+    @IBAction func setupGreenLight(_ sender: Any) {
+    }
     
+    @IBAction func setupGreenLightLessThen60(_ sender: Any) {
+    }
+    
+    @IBAction func setupGreenLightLessThen30(_ sender: Any) {
+    }
+    
+    @IBAction func setupYellowLight(_ sender: Any) {
+    }
+    
+    @IBAction func setupRedLight(_ sender: Any) {
+    }
+    
+    @IBAction func setupLive(_ sender: Any) {
+    }
 }
 
 extension UIStackView {
