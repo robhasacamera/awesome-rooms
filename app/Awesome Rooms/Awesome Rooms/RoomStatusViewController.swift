@@ -8,13 +8,15 @@
 
 import UIKit
 
-class RoomStatusViewController: UIViewController {
+class RoomStatusViewController: UIViewController, ReservationViewControllerDelegate {
   @IBOutlet var quickBookView: QuickBookView!
   
   @IBOutlet weak var topStack: UIStackView!
   
   @IBOutlet weak var bottomStack: UIStackView!
-  
+
+    var eventClient: EventClient?
+
   override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,6 +29,21 @@ class RoomStatusViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func didCreateEvent() {
+        if let navController = self.navigationController {
+            navController.popViewController(animated: true)
+        }
+        eventClient?.getEvents(completionHandler: didGetEvents, errorHandler: didNotGetEvents)
+    }
+
+    func didGetEvents(_: [Event]) {
+        // TODO parse array of events to display current or upcoming events
+    }
+
+    func didNotGetEvents(message: String) {
+        // Do nothing, just try again in one second
+        return
+    }
 
     /*
     // MARK: - Navigation
