@@ -66,7 +66,7 @@ class RoomStatusViewController: UIViewController, ReservationViewControllerDeleg
         // Do any additional setup after loading the view.
         topStack.addArrangedSubview(quickBookView)
         
-        eventClient = MockClient(scenario: .greenLightLessThanThirtyMins)
+        eventClient = MockClient(scenario: .greenLight)
         
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (_) in
             self.eventClient?.getEvents(completionHandler: { (events) in
